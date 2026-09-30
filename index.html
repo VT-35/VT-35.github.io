@@ -1,88 +1,235 @@
 <!DOCTYPE html>
-<html>
-<!--This is a comment. Comments are not displayed in the browser-->
-<!--     <a href="url">link text</a>     -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What's up Stingrays</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0b2545;
+            --navy-deep: #071a33;
+            --orange: #f26b1d;
+            --orange-dark: #c9540f;
+            --paper: #ffffff;
+            --mist: #eef2f7;
+            --bs-primary: var(--navy);
+            --bs-primary-rgb: 11, 37, 69;
+            --bs-link-color: var(--navy);
+            --bs-link-hover-color: var(--orange-dark);
+            --bs-body-bg: var(--mist);
+            --bs-body-color: #1b2a41;
+        }
+        body { background: var(--mist); }
+        h1, h2, h3, .navbar-brand { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; letter-spacing: .01em; }
 
+        /* Trainer-livery stripe: orange band, white gap, orange band */
+        .stripe { height: 10px; background: linear-gradient(var(--orange) 0 4px, var(--paper) 4px 6px, var(--orange) 6px 10px); }
 
+        .navbar { background: var(--navy-deep); }
+        .navbar-brand { color: #fff; font-size: 1.5rem; }
+        .navbar-brand:hover { color: var(--orange); }
 
+        .hero { background: var(--navy); color: #fff; }
+        .hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 700; }
+        .hero p { color: #d5deeb; max-width: 60ch; }
+        .hero a { color: #fff; text-decoration-color: var(--orange); text-underline-offset: 3px; }
+        .hero a:hover { color: var(--orange); }
+        .hero img { border: 4px solid #fff; box-shadow: 8px 8px 0 var(--orange); }
+
+        .section-title { color: var(--navy); font-size: 1.75rem; font-weight: 700; border-bottom: 3px solid var(--orange); display: inline-block; padding-bottom: .1rem; }
+        .panel { background: var(--paper); border: 1px solid #d3dbe6; border-top: 6px solid var(--navy); border-radius: .25rem; }
+        .panel.wx { border-top-color: var(--orange); }
+
+        .list-group-item-action { color: var(--navy); font-weight: 500; }
+        .list-group-item-action:hover, .list-group-item-action:focus { background: #fff3ea; color: var(--orange-dark); }
+        .list-group-item + .list-group-item { border-top-color: #e3e9f1; }
+
+        .btn-orange { --bs-btn-bg: var(--orange); --bs-btn-border-color: var(--orange); --bs-btn-color: #fff;
+            --bs-btn-hover-bg: var(--orange-dark); --bs-btn-hover-border-color: var(--orange-dark); --bs-btn-hover-color: #fff;
+            --bs-btn-active-bg: var(--orange-dark); --bs-btn-active-border-color: var(--orange-dark); --bs-btn-active-color: #fff; }
+        .btn-outline-navy { --bs-btn-color: var(--navy); --bs-btn-border-color: var(--navy);
+            --bs-btn-hover-bg: var(--navy); --bs-btn-hover-border-color: var(--navy); --bs-btn-hover-color: #fff; }
+
+        .code-box { background: var(--navy); color: #fff; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9rem;
+            border-left: 5px solid var(--orange); border-radius: .25rem; padding: .75rem 1rem; word-spacing: .25em; user-select: all; }
+        .aside { color: #52627a; font-size: .95rem; }
+
+        footer { background: var(--navy-deep); color: #b8c4d6; }
+        footer a { color: #fff; text-decoration-color: var(--orange); }
+        footer a:hover { color: var(--orange); }
+        .accordion { --bs-accordion-active-bg: #fff3ea; --bs-accordion-active-color: var(--orange-dark); --bs-accordion-btn-focus-box-shadow: 0 0 0 .2rem rgba(242,107,29,.35); }
+        a:focus-visible, .btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+    </style>
+</head>
 <body>
-<img src="images/T44.jpg" alt="The mighty T-44C Pegasus" height="325" width="605">
 
-<h1>What's up Stingrays</h1>
-<p>Tired of typing in every single airport identifier code before you brief? Enjoy these links</p>
-<p></p>
-<p>I made this website four years ago -- thrilled people still use it, and big shoutout to Sarah for updating it.</p>
-<p></p>
-<p>For my Navy kids, feel free to reach out to Gordon.s.kiesling.mil@us.navy.mil with P-8A or MQ-4C questions. </p>
-<p></p>
-<p><b>DD-175-1 Wx Brief</b></p>
-<a href="https://fwb.metoc.navy.mil" target="_blank" rel="noopener noreferrer">METOC Server</a>
-<p>Apparently the NAVO server was discontinued :/</p>
-<p></p>
-<p> </p>
-<p><b>NOTAMS</b></p> <!-- KNGP+KCRP+KTFP+KALI+KNOG+KIKG+KVCT+KPSX+KPIL+KBRO+KHRL+KMFE+KZHU+KGPS  -->
-<a href="https://www.notams.faa.gov/dinsQueryWeb/queryRetrievalMapAction.do
-?method=displayByICAOs&reportType=RAW&formatType=DOMESTIC&retrieveLocId=
-KNGP+KCRP+KNGW+KTFP+KALI+KNOG+KNQI+KIKG+KVCT+KPSX+KPIL+KBRO+KHRL+KMFE+KZHU+KGPS&actionType=notamRetrievalByICAOs"
-target="_blank" rel="noopener noreferrer">
-    With Houston Center (hella long)</a>
-<p></p>
-<a href="https://www.notams.faa.gov/dinsQueryWeb/queryRetrievalMapAction.do
-?method=displayByICAOs&reportType=RAW&formatType=DOMESTIC&retrieveLocId=
-KNGP+KCRP+KNGW+KTFP+KALI+KNOG+KNQI+KIKG+KVCT+KPSX+KPIL+KBRO+KHRL+KMFE+KGPS&actionType=notamRetrievalByICAOs"
-target="_blank" rel="noopener noreferrer">
-    Without Houston Center</a>
-<p></p>
-<a href="https://www.daip.jcs.mil/daip/mobile/index">DoD Aeronautical Information System</a>
-<p>A Stingray reports the above website should have the most current NOTAMs available. I also like that it pulls Navaid NOTAMs automatically based on associated airfield entry.</p>
-<p>Unfortunately, it doesn't resolve requests via URL. So you'll have to copy and paste these in:</p>
-<p>KNGP KCRP KTFP KALI KNOG KIKG KVCT KPSX KPIL KBRO KHRL KMFE KZHU KGPS</p>
-<p></p>
-<a href="http://ww1.jeppesen.com/company/alerts/aviation-alerts.jsp?" target="_blank" rel="noopener noreferrer">Jeppesen NOTAMS</a>
-<p></p>
-<a href="https://sapt.faa.gov/outages.php?outageType=129011150&outageResolution=0.5" target="_blank" rel="noopener noreferrer">
-    RAIM Outage Prediction</a>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">VT-35 Stingrays</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#wx">Wx Brief</a></li>
+                <li class="nav-item"><a class="nav-link" href="#notams">NOTAMs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bash">BASH</a></li>
+                <li class="nav-item"><a class="nav-link" href="#metars">METARs/TAF</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gouge">Gouge</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="stripe"></div>
 
-<p></p>
-<p><b>BASH Report</b></p>
-<a href="https://www.usahas.com" target="_blank" rel="noopener noreferrer">BASH Home</a>
-<p></p>
-<p></p>
+<header class="hero py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <img src="images/T44.jpg" alt="The mighty T-44C Pegasus" class="img-fluid" width="605" height="325">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h1>What's up Stingrays</h1>
+                <p class="lead">Tired of typing in every single airport identifier code before you brief? Enjoy these links.</p>
+                <p>I made this website four years ago &mdash; thrilled people still use it, and big shoutout to Sarah for updating it.</p>
+                <p>For my Navy kids, feel free to reach out to
+                    <a href="mailto:Gordon.s.kiesling.mil@us.navy.mil">Gordon.s.kiesling.mil@us.navy.mil</a>
+                    with P-8A or MQ-4C questions.</p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="stripe"></div>
 
-<p><b>METARS and TAF</b></p>
-<a href="https://aviationweather.gov/data/metar/?id=KNGP,KCRP,KTFP,KALI,KNOG,KNQI,KIKG,KVCT,KPSX,KPIL,KBRO,KHRL,KMFE&hours=0&include_taf=yes" 
-   target="_blank" rel="noopener noreferrer">aviationweather.gov</a>
-<p></p>
-<p></p>
+<main class="container py-5">
+    <div class="row g-4">
 
-<p><b>Gouge</b></p>
-<a href="https://www.cnatra.navy.mil/tw4/vt35/university.asp" target="_blank" rel="noopener noreferrer">VT-35 Website and Multi-Engine University</a>
-<p></p>
-<a href="https://tiltmafia.weebly.com/" target="_blank" rel="noopener noreferrer">Tilt Mafia</a>
-<p></p>
-<a href="https://www.cnatra.navy.mil/scheds/schedule_data.aspx?sq=vt-35" target="_blank" rel="noopener noreferrer">CNATRA Web Sked</a>
-<p></p>
-<a href="https://skyvector.com" target="_blank" rel="noopener noreferrer">Sky Vector</a>
-<p></p>
-<a href="https://portal.fnmoc.navy.mil/opars-ufs/index.html" target="_blank" rel="noopener noreferrer">OPARS</a>
-<p></p>
-<a href="https://www.baseops.net/" target="_blank" rel="noopener noreferrer">BASEOPS.NET</a>
-<p></p>
-<a href="https://www.youtube.com/watch?v=-z6qtoR6bZQ" target="_blank" rel="noopener noreferrer">Your Future</a>
-<p></p>
-    
+        <!-- Wx Brief -->
+        <section class="col-lg-6" id="wx">
+            <h2 class="section-title mb-3">DD-175-1 Wx Brief</h2>
+            <div class="panel wx p-3">
+                <a class="btn btn-orange" href="https://fwb.metoc.navy.mil" target="_blank" rel="noopener noreferrer">METOC Server</a>
+                <p class="aside mt-3 mb-0">Apparently the NAVO server was discontinued :/</p>
+            </div>
+        </section>
 
-<p>This website not endorsed by the Department of the Navy, CNATRA, or VT-35</p>
-<p>If you need to get in touch with the website creator, create a new issue
-    <a href="https://github.com/VT-35/VT-35.github.io/issues/" target="_blank" rel="noopener noreferrer">here</a>. Suggestions welcome.</p>
+        <!-- BASH -->
+        <section class="col-lg-6" id="bash">
+            <h2 class="section-title mb-3">BASH Report</h2>
+            <div class="panel p-3">
+                <a class="btn btn-outline-navy" href="https://www.usahas.com" target="_blank" rel="noopener noreferrer">BASH Home</a>
+            </div>
+        </section>
 
-<img src="images/meme2.jpg" alt="Sorry Steve">
+        <!-- NOTAMs -->
+        <section class="col-12" id="notams">
+            <h2 class="section-title mb-3">NOTAMs</h2>
+            <!-- KNGP+KCRP+KTFP+KALI+KNOG+KIKG+KVCT+KPSX+KPIL+KBRO+KHRL+KMFE+KZHU+KGPS -->
+            <div class="panel p-3">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="list-group">
+                            <a class="list-group-item list-group-item-action" target="_blank" rel="noopener noreferrer"
+                               href="https://www.notams.faa.gov/dinsQueryWeb/queryRetrievalMapAction.do?method=displayByICAOs&reportType=RAW&formatType=DOMESTIC&retrieveLocId=KNGP+KCRP+KNGW+KTFP+KALI+KNOG+KNQI+KIKG+KVCT+KPSX+KPIL+KBRO+KHRL+KMFE+KZHU+KGPS&actionType=notamRetrievalByICAOs">
+                                With Houston Center (hella long)</a>
+                            <a class="list-group-item list-group-item-action" target="_blank" rel="noopener noreferrer"
+                               href="https://www.notams.faa.gov/dinsQueryWeb/queryRetrievalMapAction.do?method=displayByICAOs&reportType=RAW&formatType=DOMESTIC&retrieveLocId=KNGP+KCRP+KNGW+KTFP+KALI+KNOG+KNQI+KIKG+KVCT+KPSX+KPIL+KBRO+KHRL+KMFE+KGPS&actionType=notamRetrievalByICAOs">
+                                Without Houston Center</a>
+                            <a class="list-group-item list-group-item-action" target="_blank" rel="noopener noreferrer"
+                               href="http://ww1.jeppesen.com/company/alerts/aviation-alerts.jsp?">Jeppesen NOTAMs</a>
+                            <a class="list-group-item list-group-item-action" target="_blank" rel="noopener noreferrer"
+                               href="https://sapt.faa.gov/outages.php?outageType=129011150&outageResolution=0.5">RAIM Outage Prediction</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="h4 text-navy" style="color:var(--navy)">
+                            <a href="https://www.daip.jcs.mil/daip/mobile/index" target="_blank" rel="noopener noreferrer">DoD Aeronautical Information System</a>
+                        </h3>
+                        <p class="aside">A Stingray reports the above website should have the most current NOTAMs available. I also like that it pulls Navaid NOTAMs automatically based on associated airfield entry.</p>
+                        <p class="aside">Unfortunately, it doesn't resolve requests via URL. So you'll have to copy and paste these in:</p>
+                        <div class="code-box mb-2" id="icaos">KNGP KCRP KTFP KALI KNOG KIKG KVCT KPSX KPIL KBRO KHRL KMFE KZHU KGPS</div>
+                        <button type="button" class="btn btn-sm btn-orange" id="copy-btn">Copy identifiers</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<p>Changelog</p>
-<p>18 March 20: Added RAIM, skyvector, KNQI and KNGW to links</p>
-<p>25 March 20: Added OPARS and BASEOPS links</p>
-<p>21 October 23: Updated links for METARs/TAFs, BASH, and FWB</p>
-<p>1 Nov 23: Credit to Sarah!! I'm still alive feel free to push more change requests!!</p>
-<p>1 May 24: Complied with request from ReekyGarza to include link to DAIP.JCS.MIL</p>
+        <!-- METARs -->
+        <section class="col-lg-6" id="metars">
+            <h2 class="section-title mb-3">METARs and TAF</h2>
+            <div class="panel p-3">
+                <a class="btn btn-orange" target="_blank" rel="noopener noreferrer"
+                   href="https://aviationweather.gov/data/metar/?id=KNGP,KCRP,KTFP,KALI,KNOG,KNQI,KIKG,KVCT,KPSX,KPIL,KBRO,KHRL,KMFE&hours=0&include_taf=yes">aviationweather.gov</a>
+            </div>
+        </section>
+
+        <!-- Gouge -->
+        <section class="col-lg-6" id="gouge">
+            <h2 class="section-title mb-3">Gouge</h2>
+            <div class="list-group panel">
+                <a class="list-group-item list-group-item-action" href="https://www.cnatra.navy.mil/tw4/vt35/university.asp" target="_blank" rel="noopener noreferrer">VT-35 Website and Multi-Engine University</a>
+                <a class="list-group-item list-group-item-action" href="https://tiltmafia.weebly.com/" target="_blank" rel="noopener noreferrer">Tilt Mafia</a>
+                <a class="list-group-item list-group-item-action" href="https://www.cnatra.navy.mil/scheds/schedule_data.aspx?sq=vt-35" target="_blank" rel="noopener noreferrer">CNATRA Web Sked</a>
+                <a class="list-group-item list-group-item-action" href="https://skyvector.com" target="_blank" rel="noopener noreferrer">Sky Vector</a>
+                <a class="list-group-item list-group-item-action" href="https://portal.fnmoc.navy.mil/opars-ufs/index.html" target="_blank" rel="noopener noreferrer">OPARS</a>
+                <a class="list-group-item list-group-item-action" href="https://www.baseops.net/" target="_blank" rel="noopener noreferrer">BASEOPS.NET</a>
+                <a class="list-group-item list-group-item-action" href="https://www.youtube.com/watch?v=-z6qtoR6bZQ" target="_blank" rel="noopener noreferrer">Your Future</a>
+            </div>
+        </section>
+
+        <!-- Meme + changelog -->
+        <section class="col-12">
+            <div class="row g-4 align-items-start">
+                <div class="col-md-5">
+                    <img src="images/meme2.jpg" alt="Sorry Steve" class="img-fluid rounded border border-3 border-white shadow-sm">
+                </div>
+                <div class="col-md-7">
+                    <div class="accordion" id="changelog">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#log" aria-expanded="false" aria-controls="log">Changelog</button>
+                            </h2>
+                            <div id="log" class="accordion-collapse collapse" data-bs-parent="#changelog">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">18 March 20: Added RAIM, skyvector, KNQI and KNGW to links</li>
+                                    <li class="list-group-item">25 March 20: Added OPARS and BASEOPS links</li>
+                                    <li class="list-group-item">21 October 23: Updated links for METARs/TAFs, BASH, and FWB</li>
+                                    <li class="list-group-item">1 Nov 23: Credit to Sarah!! I'm still alive feel free to push more change requests!!</li>
+                                    <li class="list-group-item">1 May 24: Complied with request from ReekyGarza to include link to DAIP.JCS.MIL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<div class="stripe"></div>
+<footer class="py-4">
+    <div class="container small">
+        <p class="mb-1">This website not endorsed by the Department of the Navy, CNATRA, or VT-35.</p>
+        <p class="mb-0">If you need to get in touch with the website creator, create a new issue
+            <a href="https://github.com/VT-35/VT-35.github.io/issues/" target="_blank" rel="noopener noreferrer">here</a>. Suggestions welcome.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('copy-btn').addEventListener('click', function () {
+        var btn = this;
+        var text = document.getElementById('icaos').textContent.trim();
+        navigator.clipboard.writeText(text).then(function () {
+            btn.textContent = 'Copied';
+            setTimeout(function () { btn.textContent = 'Copy identifiers'; }, 1800);
+        });
+    });
+</script>
 </body>
 </html>
